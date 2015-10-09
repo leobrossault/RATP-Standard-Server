@@ -528,14 +528,6 @@
 			}
 		},
 		{
-			"file": "controllers/bus.js",
-			"settings":
-			{
-				"buffer_size": 1110,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "routes/routes.js",
 			"settings":
 			{
@@ -584,7 +576,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 394.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -608,17 +600,16 @@
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/controllers",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/datas",
-		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/datas/bus/20",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/node_modules",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/routes"
 	],
 	"file_history":
 	[
+		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/controllers/bus.js",
 		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/server.js",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/package.json",
 		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/config/routes.js",
 		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/controller/teacher-v2.js",
-		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/controllers/bus.js",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/routes/routes.js",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/server.js",
 		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/controller/pupilAppController.js",
@@ -904,7 +895,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -932,39 +923,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "controllers/bus.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1110,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								243,
-								243
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "routes/routes.js",
 					"semi_transient": false,
 					"settings":
@@ -976,8 +939,8 @@
 						"selection":
 						[
 							[
-								94,
-								94
+								40,
+								0
 							]
 						],
 						"settings":

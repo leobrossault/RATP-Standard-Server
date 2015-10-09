@@ -6,7 +6,7 @@ var express = require('express'),
 var app = express();
 
 app.use(bodyParser.json()); 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 require('./routes/routes')(app);
 // app.use(express.static(__dirname + '/public'));
 

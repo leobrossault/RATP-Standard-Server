@@ -1,0 +1,23 @@
+{
+  "name": "sisley",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://LBrossault@bitbucket.org/projetsisley/server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "express-path": "^0.3.8",
+    "routes": "^2.1.0",
+    "xmlhttprequest": "^1.7.0"
+  }
+}

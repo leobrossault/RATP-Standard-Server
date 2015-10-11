@@ -21,8 +21,6 @@ exports.parseGTFS = function (req, res) {
 	parseTxt(line, type, 'trips', direction);
 	parseTxt(line, type, 'routes', direction);
 
-	console.log(line);
-
 	setTimeout(function () {
 		if (jsonResult != null) {
 			res.json(jsonResult);
@@ -104,14 +102,11 @@ function parseTxt (line, type, file, direction) {
 
 	    if (nbParse == 4) {
 	    	jsonResult = getSchedule (parseTimeData, parseStopData, parseTripsData, parseRoutesData, direction);
-	    	console.log(jsonResult);
 	    }
 	});
 }
 
 function getSchedule (timeData, stopData, tripsData, routesData, direction) {
-	// Changer la logique, d'abord localiser puis regarder les heures, getStop doit venir avant getTime, 
-	//on récupère le stop_id puis on va chercher dans stop_time les stop_id correspondantes puis on compare avec l'heure
 	var goodStop = getStop (stopData),
 		goodTrips = getTrips (tripsData, direction),
 		goodRoute = getRoutes (routesData, goodTrips[2].route_id, direction),
@@ -217,7 +212,6 @@ function dateCompare (time1, time2) {
 	parts = time2.split(":");
 	t2.setHours(parts[0],parts[1],parts[2],0);
 
-	// returns 1 if greater, -1 if less and 0 if the same
 	if (t1.getTime()>t2.getTime()) return 1;
 	if (t1.getTime()<t2.getTime()) return -1;
 	return 0;

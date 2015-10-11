@@ -3,18 +3,34 @@ var fs = require('fs'),
 	_this = this,
 	nbParse = 0,
 	parseTimeData,
-	parseStopData;
+	parseStopData,
+	parseTripsData,
+	parseRoutesData,
+	jsonResult;
 
 exports.parseGTFS = function (req, res) {
 	var type = req.params.type,
 		line = req.params.line,
+		direction = req.params.direction,
 		countRows = 0;
 
-	parseTxt(line, type, 'stop_times');
-	parseTxt(line, type, 'stops');
+	jsonResult = null;
+	nbParse = 0;
+	parseTxt(line, type, 'stop_times', direction);
+	parseTxt(line, type, 'stops', direction);
+	parseTxt(line, type, 'trips', direction);
+	parseTxt(line, type, 'routes', direction);
+
+	console.log(line);
+
+	setTimeout(function () {
+		if (jsonResult != null) {
+			res.json(jsonResult);
+		}
+	}, 500);
 }
 
-function parseTxt (line, type, file) {
+function parseTxt (line, type, file, direction) {
 	var countRows = 0,
 		result = [];
 
@@ -26,7 +42,6 @@ function parseTxt (line, type, file) {
 
 	    row.forEach(function (el) {
 	    	countRows ++;
-
 	    	if (countRows != null && file == 'stop_times') {
 		    	result.push({
 		    		'trip_id': el.split(',')[0],
@@ -48,6 +63,28 @@ function parseTxt (line, type, file) {
 		    		'location_type': el.split(',')[6],
 		    		'parent_station': el.split(',')[7],
 		    	});		    	
+		    } else if (countRows != null && file == 'trips') {
+		    	result.push({
+		    		'route_id': el.split(',')[0],
+		    		'service_id': el.split(',')[1],
+		    		'trip_id': el.split(',')[2],
+		    		'trip_headsign': el.split(',')[3],
+		    		'trip_short_name': el.split(',')[4],
+		    		'direction_id': el.split(',')[5],
+		    		'shape_id': el.split(',')[6],
+		    	});		    	
+		    } else if (countRows != null && file == 'routes') {
+		    	result.push({
+		    		'route_id': el.split(',')[0],
+		    		'agency_id': el.split(',')[1],
+		    		'route_short_name': el.split(',')[2],
+		    		'route_long_name': el.split(',')[3],
+		    		'route_desc': el.split(',')[4],
+		    		'route_type': el.split(',')[5],
+		    		'route_url': el.split(',')[6],
+		    		'route_color': el.split(',')[7],
+		    		'route_text_color': el.split(',')[8],
+		    	});		    	
 		    }
 	    });
 
@@ -57,63 +94,30 @@ function parseTxt (line, type, file) {
 	    } else if (file == 'stops') {
 	    	parseStopData = result;
 	    	nbParse ++
+	    } else if (file == 'trips') {
+	    	parseTripsData = result;
+	    	nbParse ++
+	    } else if (file == 'routes') {
+	    	parseRoutesData = result;
+	    	nbParse ++
 	    }
 
-	    if (nbParse == 2) {
-	    	getTrip(parseTimeData, parseStopData);
+	    if (nbParse == 4) {
+	    	jsonResult = getSchedule (parseTimeData, parseStopData, parseTripsData, parseRoutesData, direction);
+	    	console.log(jsonResult);
 	    }
 	});
 }
 
-function getTrip (timeData, stopData) {
+function getSchedule (timeData, stopData, tripsData, routesData, direction) {
 	// Changer la logique, d'abord localiser puis regarder les heures, getStop doit venir avant getTime, 
 	//on récupère le stop_id puis on va chercher dans stop_time les stop_id correspondantes puis on compare avec l'heure
-	
-	var allGoodTimes = getTimes(timeData),
-		goodStop = getStop(stopData),
-		goodTime;
-		console.log(goodStop.stop_id);
+	var goodStop = getStop (stopData),
+		goodTrips = getTrips (tripsData, direction),
+		goodRoute = getRoutes (routesData, goodTrips[2].route_id, direction),
+		goodTime = getTimes (timeData, goodStop.stop_id, goodTrips[2].trip_id);
 
-	for (var l = 0; l < allGoodTimes.length; l ++) {
-		console.log(allGoodTimes[l].stop_id);
-
-		if (allGoodTimes[l].stop_id == goodStop.stop_id) {
-			goodTime = allGoodTimes[l];
-		}
-	}
-
-	// console.log(goodTime);
-	// console.log(goodStop);
-}
-
-function getTimes (data) {
-	var date = new Date (),
-		hour = date.getHours (),
-		minute = date.getMinutes (),
-		actualTime,
-		goodTimes = [];
-
-	if (hour < 10) {
-		if (minute < 10) {
-			actualTime = '0'+hour+':0'+minute+':00';
-		} else {
-			actualTime = '0'+hour+':'+minute+':00';
-		}
-	} else {
-		if (minute < 10) {
-			actualTime = hour+':0'+minute+':00';
-		} else {
-			actualTime = hour+':'+minute+':00';
-		}
-	}
-
-	for (var i = 0; i < data.length; i ++) {
-		if (data[i].arrival_time == actualTime) {
-			goodTimes.push(data[i])
-		}
-	}
-
-	return goodTimes;
+	return('Prochain bus à l\'arrêt '+goodStop.stop_name+', direction '+goodRoute+', est à '+goodTime.arrival_time);
 }
 
 function getStop (data) {
@@ -137,6 +141,86 @@ function getStop (data) {
 	}
 
 	return goodStop;
+}
+
+function getTrips (trips, direction) {
+	var goodTrips = [];
+
+	for (var k = 1; k < trips.length - 1; k ++) {
+		if (trips[k].direction_id == direction) {
+			goodTrips.push(trips[k]);
+		}
+	}
+
+	return goodTrips;
+}
+
+function getRoutes (routes, route_id, direction) {
+	var nameRoute;
+
+	for (var p = 1; p < routes.length - 1; p ++) {
+		if (routes[p].route_id == route_id) {
+			nameRoute = routes[p].route_long_name;
+		}
+	}
+
+	return nameRoute;
+}
+
+function getTimes (data, stop_id, trip_id) {
+	var date = new Date (),
+		hour = date.getHours (),
+		minute = date.getMinutes (),
+		actualTime,
+		goodTimes = [],
+		posGoodTime,
+		goodObjTimes;
+
+	if (hour < 10) {
+		if (minute < 10) {
+			actualTime = '0'+hour+':0'+minute+':00';
+		} else {
+			actualTime = '0'+hour+':'+minute+':00';
+		}
+	} else {
+		if (minute < 10) {
+			actualTime = hour+':0'+minute+':00';
+		} else {
+			actualTime = hour+':'+minute+':00';
+		}
+	}
+
+	for (var i = 1; i < data.length - 1; i ++) {
+		var hour = dateCompare (data[i].arrival_time, actualTime);
+		if (hour == 1 && data[i].stop_id == stop_id) {
+
+			var a = data[i].arrival_time.split(':');
+			var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]); 
+			goodTimes.push(seconds);
+
+			if (Math.min.apply(null, goodTimes) == seconds) {
+				posGoodTime = i;
+			}
+		}
+	}
+
+	return data[posGoodTime];
+}
+
+/* CALC FUNCTIONS */
+
+function dateCompare (time1, time2) {
+	var t1 = new Date();
+	var parts = time1.split(":");
+	t1.setHours(parts[0],parts[1],parts[2],0);
+	var t2 = new Date();
+	parts = time2.split(":");
+	t2.setHours(parts[0],parts[1],parts[2],0);
+
+	// returns 1 if greater, -1 if less and 0 if the same
+	if (t1.getTime()>t2.getTime()) return 1;
+	if (t1.getTime()<t2.getTime()) return -1;
+	return 0;
 }
 
 function distance(lat1, lon1, lat2, lon2, unit) {

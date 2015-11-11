@@ -111,7 +111,7 @@ function getSchedule (timeData, stopData, tripsData, routesData, direction) {
 		goodTrips = getTrips (tripsData, direction),
 		goodRoute = getRoutes (routesData, goodTrips[2].route_id, direction),
 		goodTime = getTimes (timeData, goodStop.stop_id, goodTrips[2].trip_id);
-
+		console.log('Prochain bus à l\'arrêt '+goodStop.stop_name+', direction '+goodRoute+', est à '+goodTime.arrival_time);
 	return('Prochain bus à l\'arrêt '+goodStop.stop_name+', direction '+goodRoute+', est à '+goodTime.arrival_time);
 }
 
@@ -168,8 +168,7 @@ function getTimes (data, stop_id, trip_id) {
 		minute = date.getMinutes (),
 		actualTime,
 		goodTimes = [],
-		posGoodTime,
-		goodObjTimes;
+		posGoodTime;
 
 	if (hour < 10) {
 		if (minute < 10) {

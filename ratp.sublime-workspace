@@ -4,12 +4,100 @@
 		"selected_items":
 		[
 			[
+				"js",
+				"jsonResult"
+			],
+			[
+				"arr",
+				"arrival_time"
+			],
+			[
+				"goo",
+				"goodTime"
+			],
+			[
+				"go",
+				"goodRoute"
+			],
+			[
+				"tri",
+				"trip_id"
+			],
+			[
+				"route",
+				"route_id"
+			],
+			[
+				"g",
+				"getRoutes"
+			],
+			[
+				"par",
+				"parseRoutesData"
+			],
+			[
+				"good",
+				"goodTrip"
+			],
+			[
+				"data",
+				"data"
+			],
+			[
+				"da",
+				"datas"
+			],
+			[
 				"stop",
-				"stop_times"
+				"stop_id"
+			],
+			[
+				"sto",
+				"stop_id"
+			],
+			[
+				"sti",
+				"stop_id"
+			],
+			[
+				"time",
+				"time1"
+			],
+			[
+				"date",
+				"dateCompare"
+			],
+			[
+				"st",
+				"stop_id"
+			],
+			[
+				"my",
+				"myStop"
+			],
+			[
+				"tim",
+				"timeData"
+			],
+			[
+				"lo",
+				"locationLatStop"
+			],
+			[
+				"getT",
+				"getTimes"
+			],
+			[
+				"loc",
+				"locationLatMe"
 			],
 			[
 				"get",
 				"getTimes"
+			],
+			[
+				"res",
+				"result"
 			],
 			[
 				"count",
@@ -18,10 +106,6 @@
 			[
 				"a",
 				"array"
-			],
-			[
-				"st",
-				"stop_times"
 			],
 			[
 				"lin",
@@ -192,10 +276,6 @@
 				"bookID"
 			],
 			[
-				"res",
-				"ressources"
-			],
-			[
 				"le",
 				"length"
 			],
@@ -298,10 +378,6 @@
 			[
 				"ortho",
 				"orthoActive"
-			],
-			[
-				"par",
-				"params"
 			],
 			[
 				"SU",
@@ -438,103 +514,11 @@
 			[
 				"bb",
 				"bxz-bb	box-sizing: border-box;"
-			],
-			[
-				"test",
-				"test1"
-			],
-			[
-				"index",
-				"indexSecond"
-			],
-			[
-				"clic",
-				"click"
-			],
-			[
-				"first",
-				"first-child"
-			],
-			[
-				"ress",
-				"ressourcesRightFirst"
-			],
-			[
-				"show",
-				"showRessources"
-			],
-			[
-				"conu",
-				"conjugVar"
-			],
-			[
-				"conju",
-				"conjugVar"
-			],
-			[
-				"gra",
-				"grammaireVar"
-			],
-			[
-				"SUBJECT",
-				"subject"
-			],
-			[
-				"teah",
-				"teacher"
-			],
-			[
-				"code",
-				"codeUrl"
-			],
-			[
-				"box",
-				"box	CSS - box-sizing: border-box;"
-			],
-			[
-				"overf",
-				"overflow"
-			],
-			[
-				"progress",
-				"progressPupil"
-			],
-			[
-				"op",
-				"opacity"
-			],
-			[
-				"box-s",
-				"box-sizing"
-			],
-			[
-				"margin",
-				"margin-top"
-			],
-			[
-				"rgb",
-				"rgba()"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "server.js",
-			"settings":
-			{
-				"buffer_size": 370,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routes/routes.js",
-			"settings":
-			{
-				"buffer_size": 114,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -600,18 +584,24 @@
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/controllers",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/datas",
+		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/datas/bus",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/node_modules",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/routes"
 	],
 	"file_history":
 	[
+		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/server.js",
+		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/routes/routes.js",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/controllers/bus.js",
+		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/datas/bus/91/trips.txt",
+		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/datas/bus/91/stop_times.txt",
+		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/datas/bus/91/stops.txt",
+		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/datas/bus/91/routes.txt",
+		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/datas/bus/20/stop_times.txt",
 		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/server.js",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/package.json",
 		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/config/routes.js",
 		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/controller/teacher-v2.js",
-		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/routes/routes.js",
-		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/server.js",
 		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/controller/pupilAppController.js",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/bus.js",
 		"/Users/leobrossault/Documents/Projects/RATP-Standard-Server/node_modules/gtfs/config.js",
@@ -727,16 +717,11 @@
 		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/public/tour-du-monde-en-80-jours.json",
 		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/views/layout/layoutTopDashClassroom.ejs",
 		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/views/dash/profil.ejs",
-		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/views/connection.ejs",
-		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/public/css/connection.css",
-		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/public/css/dashProfil.css",
-		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/views/dash/allClassroom.ejs",
-		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/views/subscribe.ejs",
-		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/models/classroom.js"
+		"/Users/leobrossault/Documents/Projects/School App/Prototype/Server/views/connection.ejs"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
@@ -750,6 +735,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"trips",
+			"k",
+			"undefined",
+			"parseInt",
+			"[i]",
+			"i",
+			"minute",
+			"19:06",
+			"console.log",
+			"var ",
+			"res",
 			"row",
 			"countRows",
 			"[countRows]",
@@ -866,18 +862,7 @@
 			"multi",
 			"10",
 			"0",
-			"grammaire",
-			"../",
-			" ./",
-			"test",
-			"li",
-			"create",
-			"null",
-			"background: none",
-			"4",
-			"padding: 14px;",
-			"  padding: 14px;",
-			"my-pupil"
+			"grammaire"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -895,65 +880,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "server.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 370,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								244,
-								244
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "routes/routes.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 114,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -963,7 +891,7 @@
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 63.0
 	},
 	"layout":
 	{
@@ -1007,7 +935,7 @@
 		[
 			[
 				"",
-				"server.js"
+				"datas/bus/91/stop_times.txt"
 			]
 		],
 		"width": 0.0

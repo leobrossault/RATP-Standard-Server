@@ -6,8 +6,6 @@ var express = require('express'),
 	bus = require('./controllers/bus');
 
 board.on('ready', function() {
-	var pin = new five.Pin(2);
-
 	console.log('Board is ready !');
 });
 

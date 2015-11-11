@@ -19,5 +19,8 @@
     "express-path": "^0.3.8",
     "routes": "^2.1.0",
     "xmlhttprequest": "^1.7.0"
+  },
+  "devDependencies": {
+    "johnny-five": "^0.9.9"
   }
 }

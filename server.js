@@ -1,6 +1,13 @@
 var express = require('express'),
 	bodyParser = require('body-parser'),
-	path = require('express-path');
+	path = require('express-path'),
+	five = require("johnny-five"),
+	board = new five.Board();
+
+board.on("ready", function() {
+    var led = new five.Led(2);
+    led.blink(500);
+});
 
 /* EXPORT MODULE AND ADD ROUTES */
 var app = express();

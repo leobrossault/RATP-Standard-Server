@@ -1,13 +1,23 @@
 var express = require('express'),
 	bodyParser = require('body-parser'),
 	path = require('express-path'),
-	five = require("johnny-five"),
-	board = new five.Board();
+	five = require('johnny-five'),
+	board = new five.Board(),
+	bus = require('./controllers/bus');
 
-board.on("ready", function() {
-    var led = new five.Led(2);
-    led.blink(500);
+board.on('ready', function() {
+	var pin = new five.Pin(13);
+
+	pin.query(function(state) {
+	  console.log(state);
+	});
 });
+
+getData(91);
+
+function getData (line) {
+	bus.parseGTFS ('bus', line, 0);
+}
 
 /* EXPORT MODULE AND ADD ROUTES */
 var app = express();

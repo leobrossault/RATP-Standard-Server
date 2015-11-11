@@ -8,10 +8,10 @@ var fs = require('fs'),
 	parseRoutesData,
 	jsonResult;
 
-exports.parseGTFS = function (req, res) {
-	var type = req.params.type,
-		line = req.params.line,
-		direction = req.params.direction,
+exports.parseGTFS = function (getType, getLine, getDirection) {
+	var type = getType,
+		line = getLine,
+		direction = getDirection,
 		countRows = 0;
 
 	jsonResult = null;
@@ -23,7 +23,7 @@ exports.parseGTFS = function (req, res) {
 
 	setTimeout(function () {
 		if (jsonResult != null) {
-			res.json(jsonResult);
+			// res.json(jsonResult);
 		}
 	}, 500);
 }
@@ -107,19 +107,21 @@ function parseTxt (line, type, file, direction) {
 }
 
 function getSchedule (timeData, stopData, tripsData, routesData, direction) {
-	var goodStop = getStop (stopData),
+	var goodStop = getStop (stopData, direction),
 		goodTrips = getTrips (tripsData, direction),
 		goodRoute = getRoutes (routesData, goodTrips[2].route_id, direction),
-		goodTime = getTimes (timeData, goodStop.stop_id, goodTrips[2].trip_id);
+		goodTime = getTimes (timeData, goodStop.stop_id, goodTrips);
+		console.log('goodTime : ' + goodTime);
 		console.log('Prochain bus à l\'arrêt '+goodStop.stop_name+', direction '+goodRoute+', est à '+goodTime.arrival_time);
 	return('Prochain bus à l\'arrêt '+goodStop.stop_name+', direction '+goodRoute+', est à '+goodTime.arrival_time);
 }
 
-function getStop (data) {
+function getStop (data, direction) {
 	var locationLatMe = 48.837225,
 		locationLongMe = 2.3514577,
 		stopsArray = [],
-		goodStop;
+		goodStopTemp,
+		goodStop = [];
 
 	for (var j = 1; j < data.length - 1; j ++) {
 		var locationLatStop = parseFloat(data[j].stop_lat),
@@ -131,11 +133,17 @@ function getStop (data) {
 
 	for (var k = 0; k < data.length - 1; k ++) {
 		if (Math.min.apply(Math, stopsArray) == stopsArray[k]) {
-			goodStop = data[k];
+			goodStopTemp = data[k];
 		}
 	}
 
-	return goodStop;
+	for (var i = 0; i < data.length - 1; i ++) {
+		if (data[i].stop_name == goodStopTemp.stop_name) {
+			goodStop.push(data[i]);
+		}
+	}
+	
+	return goodStop[direction];
 }
 
 function getTrips (trips, direction) {
@@ -151,18 +159,24 @@ function getTrips (trips, direction) {
 }
 
 function getRoutes (routes, route_id, direction) {
-	var nameRoute;
+	var nameRoute = '';
 
 	for (var p = 1; p < routes.length - 1; p ++) {
 		if (routes[p].route_id == route_id) {
 			nameRoute = routes[p].route_long_name;
+
+			if (p == 1) {
+				nameRoute = nameRoute.substring(nameRoute.lastIndexOf("(")+1,nameRoute.lastIndexOf("<")).slice(0, -1);
+			} else {
+				nameRoute = nameRoute.substring(nameRoute.lastIndexOf(">")+1,nameRoute.lastIndexOf(")")).substring(1);
+			}
 		}
 	}
 
 	return nameRoute;
 }
 
-function getTimes (data, stop_id, trip_id) {
+function getTimes (data, stop_id, data_trip) {
 	var date = new Date (),
 		hour = date.getHours (),
 		minute = date.getMinutes (),
@@ -192,8 +206,12 @@ function getTimes (data, stop_id, trip_id) {
 			var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]); 
 			goodTimes.push(seconds);
 
-			if (Math.min.apply(null, goodTimes) == seconds) {
-				posGoodTime = i;
+			for (var k = 0; k < data_trip.length; k ++) {
+				if (data[i].trip_id == data_trip[k].trip_id) {
+					if (Math.min.apply(null, goodTimes) == seconds) {
+						posGoodTime = i;
+					}
+				}
 			}
 		}
 	}

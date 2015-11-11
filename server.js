@@ -8,8 +8,8 @@ var express = require('express'),
 board.on('ready', function() {
 	var pin = new five.Pin(2);
 
-	pin.query(function(state) {
-	  console.log(state);
+	pin.read(function(error, value) {
+	  console.log(value);
 	});
 });
 

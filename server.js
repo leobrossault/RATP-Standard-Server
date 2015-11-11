@@ -5,13 +5,6 @@ var express = require('express'),
 	board = new five.Board(),
 	bus = require('./controllers/bus');
 
-board.on('ready', function() {
-	// var pin = new five.Pin(2);
-
-	// pin.query(function(state) {
-	//   console.log(state);
-	// });
-});
 
 getData(91);
 

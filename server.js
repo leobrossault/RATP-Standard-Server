@@ -2,7 +2,7 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	path = require('express-path'),
 	five = require('johnny-five'),
-	board = new five.Board(),
+	board = new five.Board({ port : '\\\\.\\COM6' }),
 	bus = require('./controllers/bus');
 
 board.on('ready', function() {

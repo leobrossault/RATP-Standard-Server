@@ -6,11 +6,11 @@ var express = require('express'),
 	bus = require('./controllers/bus');
 
 board.on('ready', function() {
-	var pin = new five.Pin(2);
+	// var pin = new five.Pin(2);
 
-	pin.query(function(state) {
-	  console.log(state);
-	});
+	// pin.query(function(state) {
+	//   console.log(state);
+	// });
 });
 
 getData(91);

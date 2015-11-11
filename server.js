@@ -8,9 +8,7 @@ var express = require('express'),
 board.on('ready', function() {
 	var pin = new five.Pin(2);
 
-	pin.read(function(error, value) {
-	  console.log(value);
-	});
+	console.log('Board is ready !');
 });
 
 getData(91);

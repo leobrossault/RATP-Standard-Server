@@ -21,6 +21,6 @@
     "xmlhttprequest": "^1.7.0"
   },
   "devDependencies": {
-    "johnny-five": "^0.9.9"
+    "johnny-five": "^0.8.100"
   }
 }

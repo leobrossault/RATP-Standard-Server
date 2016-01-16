@@ -14,13 +14,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.14.1",
-    "express": "^4.13.3",
-    "express-path": "^0.3.8",
-    "routes": "^2.1.0",
-    "xmlhttprequest": "^1.7.0"
+    "player": "^0.6.1",
+    "say": "^0.6.0",
+    "serialport": "^2.0.6",
+    "speaker": "^0.2.6",
+    "superagent": "^1.6.1"
   },
   "devDependencies": {
-    "johnny-five": "^0.8.100"
+
   }
 }

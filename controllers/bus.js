@@ -6,26 +6,36 @@ var fs = require('fs'),
 	parseStopData,
 	parseTripsData,
 	parseRoutesData,
-	jsonResult;
+	jsonResult,
+	Player = require('player'),
+	player,
+	error = 0,
+	say = require('say'),
+	newUrl = '',
+	superagent = require('superagent');
 
-exports.parseGTFS = function (getType, getLine, getDirection) {
+var voice;
+
+var hours,
+	minutes,
+	moment;
+
+exports.parseGTFS = function (getType, getLine, getDirection, _voice) {
 	var type = getType,
 		line = getLine,
 		direction = getDirection,
 		countRows = 0;
+		voice = _voice;
 
 	jsonResult = null;
 	nbParse = 0;
-	parseTxt(line, type, 'stop_times', direction);
-	parseTxt(line, type, 'stops', direction);
-	parseTxt(line, type, 'trips', direction);
-	parseTxt(line, type, 'routes', direction);
 
-	setTimeout(function () {
-		if (jsonResult != null) {
-			// res.json(jsonResult);
-		}
-	}, 500);
+	parseTxt(line, type, 'stop_times', direction);
+	if (error == 0) {
+		parseTxt(line, type, 'stops', direction);
+		parseTxt(line, type, 'trips', direction);
+		parseTxt(line, type, 'routes', direction);
+	}
 }
 
 function parseTxt (line, type, file, direction) {
@@ -33,87 +43,165 @@ function parseTxt (line, type, file, direction) {
 		result = [];
 
 	fs.readFile('datas/'+type+'/'+line+'/'+file+'.txt', 'utf-8', function (err, data) {
-	    if (err) throw err;
-	    fileContents = data;
+	    if (err) {
+	    	error = 1;
+			player = new Player([
+			    "https://demows.voxygen.fr/ws/tts1?text=Il+n%27y+a+pas+d%27infos+disponibles+pour+cette+ligne.&voice=Loic&header=headerless&coding=mp3%3A128-0&user=anders.ellersgaard%40mindlab.dk&hmac=bc608bac2d0241dff7080864baab1984"
+			]).on('error', function(err) {
+			    console.log(err);
+			}).play();		
+	    }
 
-	   	var row = data.split('\n');
+	    if (error == 0) {
+		    fileContents = data;
 
-	    row.forEach(function (el) {
-	    	countRows ++;
-	    	if (countRows != null && file == 'stop_times') {
-		    	result.push({
-		    		'trip_id': el.split(',')[0],
-		    		'arrival_time': el.split(',')[1],
-		    		'departure_time': el.split(',')[2],
-		    		'stop_id': el.split(',')[3],
-		    		'stop_sequence': el.split(',')[4],
-		    		'stop_headsign': el.split(',')[5],
-		    		'shape_dist_traveled': el.split(',')[6],
-		    	});
-		    } else if (countRows != null && file == 'stops') {
-		    	result.push({
-		    		'stop_id': el.split(',')[0],
-		    		'stop_code': el.split(',')[1],
-		    		'stop_name': el.split(',')[2],
-		    		'stop_desc': el.split(',')[3],
-		    		'stop_lat': el.split(',')[4],
-		    		'stop_lon': el.split(',')[5],
-		    		'location_type': el.split(',')[6],
-		    		'parent_station': el.split(',')[7],
-		    	});		    	
-		    } else if (countRows != null && file == 'trips') {
-		    	result.push({
-		    		'route_id': el.split(',')[0],
-		    		'service_id': el.split(',')[1],
-		    		'trip_id': el.split(',')[2],
-		    		'trip_headsign': el.split(',')[3],
-		    		'trip_short_name': el.split(',')[4],
-		    		'direction_id': el.split(',')[5],
-		    		'shape_id': el.split(',')[6],
-		    	});		    	
-		    } else if (countRows != null && file == 'routes') {
-		    	result.push({
-		    		'route_id': el.split(',')[0],
-		    		'agency_id': el.split(',')[1],
-		    		'route_short_name': el.split(',')[2],
-		    		'route_long_name': el.split(',')[3],
-		    		'route_desc': el.split(',')[4],
-		    		'route_type': el.split(',')[5],
-		    		'route_url': el.split(',')[6],
-		    		'route_color': el.split(',')[7],
-		    		'route_text_color': el.split(',')[8],
-		    	});		    	
+		   	var row = data.split('\n');
+
+		    row.forEach(function (el) {
+		    	countRows ++;
+		    	if (countRows != null && file == 'stop_times') {
+			    	result.push({
+			    		'trip_id': el.split(',')[0],
+			    		'arrival_time': el.split(',')[1],
+			    		'departure_time': el.split(',')[2],
+			    		'stop_id': el.split(',')[3],
+			    		'stop_sequence': el.split(',')[4],
+			    		'stop_headsign': el.split(',')[5],
+			    		'shape_dist_traveled': el.split(',')[6],
+			    	});
+			    } else if (countRows != null && file == 'stops') {
+			    	result.push({
+			    		'stop_id': el.split(',')[0],
+			    		'stop_code': el.split(',')[1],
+			    		'stop_name': el.split(',')[2],
+			    		'stop_desc': el.split(',')[3],
+			    		'stop_lat': el.split(',')[4],
+			    		'stop_lon': el.split(',')[5],
+			    		'location_type': el.split(',')[6],
+			    		'parent_station': el.split(',')[7],
+			    	});		    	
+			    } else if (countRows != null && file == 'trips') {
+			    	result.push({
+			    		'route_id': el.split(',')[0],
+			    		'service_id': el.split(',')[1],
+			    		'trip_id': el.split(',')[2],
+			    		'trip_headsign': el.split(',')[3],
+			    		'trip_short_name': el.split(',')[4],
+			    		'direction_id': el.split(',')[5],
+			    		'shape_id': el.split(',')[6],
+			    	});		    	
+			    } else if (countRows != null && file == 'routes') {
+			    	result.push({
+			    		'route_id': el.split(',')[0],
+			    		'agency_id': el.split(',')[1],
+			    		'route_short_name': el.split(',')[2],
+			    		'route_long_name': el.split(',')[3],
+			    		'route_desc': el.split(',')[4],
+			    		'route_type': el.split(',')[5],
+			    		'route_url': el.split(',')[6],
+			    		'route_color': el.split(',')[7],
+			    		'route_text_color': el.split(',')[8],
+			    	});		    	
+			    }
+		    });
+
+		    if (file == 'stop_times') {
+		    	parseTimeData = result;
+		    	nbParse ++
+		    } else if (file == 'stops') {
+		    	parseStopData = result;
+		    	nbParse ++
+		    } else if (file == 'trips') {
+		    	parseTripsData = result;
+		    	nbParse ++
+		    } else if (file == 'routes') {
+		    	parseRoutesData = result;
+		    	nbParse ++
 		    }
-	    });
 
-	    if (file == 'stop_times') {
-	    	parseTimeData = result;
-	    	nbParse ++
-	    } else if (file == 'stops') {
-	    	parseStopData = result;
-	    	nbParse ++
-	    } else if (file == 'trips') {
-	    	parseTripsData = result;
-	    	nbParse ++
-	    } else if (file == 'routes') {
-	    	parseRoutesData = result;
-	    	nbParse ++
-	    }
-
-	    if (nbParse == 4) {
-	    	jsonResult = getSchedule (parseTimeData, parseStopData, parseTripsData, parseRoutesData, direction);
-	    }
+		    if (nbParse == 4) {
+		    	jsonResult = getSchedule (parseTimeData, parseStopData, parseTripsData, parseRoutesData, direction);
+		    }
+		}
 	});
 }
 
 function getSchedule (timeData, stopData, tripsData, routesData, direction) {
-	var goodStop = getStop (stopData, direction),
-		goodTrips = getTrips (tripsData, direction),
-		goodRoute = getRoutes (routesData, goodTrips[2].route_id, direction),
-		goodTime = getTimes (timeData, goodStop.stop_id, goodTrips);
-		console.log('goodTime : ' + goodTime);
-		console.log('Prochain bus à l\'arrêt '+goodStop.stop_name+', direction '+goodRoute+', est à '+goodTime.arrival_time);
-	return('Prochain bus à l\'arrêt '+goodStop.stop_name+', direction '+goodRoute+', est à '+goodTime.arrival_time);
+	var goodStop = getStop (stopData, direction);
+
+	if (goodStop != null) {
+		var goodTrips = getTrips (tripsData, direction);
+
+		if (goodTrips != null && goodTrips[2] != null) {
+			var goodRoute = getRoutes (routesData, goodTrips[2].route_id, direction);
+
+			if (goodRoute != null) {
+				var goodTime = getTimes (timeData, goodStop.stop_id, goodTrips, goodTrips[2].route_id);
+			
+				var format_goodStop = goodStop.stop_name.toLowerCase(),
+					format_goodRoute = goodRoute.toLowerCase();
+
+				format_goodStop = format_goodStop.replace(/"/g,'');
+				format_goodRoute = format_goodRoute.replace(/"/g,'');
+
+				var url = 'Prochain bus à l\'arrêt '+format_goodStop+', direction '+format_goodRoute+', est à '+hours+' heure '+minutes;
+
+				url = encodeURIComponent(url).replace(/%20/g,'+');
+				url = url.replace(/'/g,'%27');
+
+				var ua = superagent.agent()
+				ua.get('https://www.voxygen.fr/sites/all/modules/voxygen_voices/assets/proxy/index.php?method=redirect&text='+url+'&voice=Loic&ts=1452789303887')
+					.set('User-Agent','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36')
+				   	.end(function(err, res){
+				    	if (err || !res.ok) {
+				    	  console.log('Oh no! error');
+				    	}
+
+				    	newUrl = res.redirects[0];
+				    	console.log(newUrl);
+
+						if (hours > -1 && minutes > -1) {
+							if (newUrl != '') {
+								player = new Player([
+									newUrl
+								]).on('error', function(err) {
+								    console.log(err);
+								}).play();
+							}
+							// say.speak(null , url);
+						} else {
+							player = new Player([
+							    "https://demows.voxygen.fr/ws/tts1?text=Il+n%27y+a+pas+d%27infos+disponibles+pour+cette+ligne.&voice=Loic&header=headerless&coding=mp3%3A128-0&user=anders.ellersgaard%40mindlab.dk&hmac=bc608bac2d0241dff7080864baab1984"
+							]).on('error', function(err) {
+							    console.log(err);
+							}).play();
+						}
+				    });
+			} else {
+				player = new Player([
+				    "https://demows.voxygen.fr/ws/tts1?text=Il+n%27y+a+pas+d%27infos+disponibles+pour+cette+ligne.&voice=Loic&header=headerless&coding=mp3%3A128-0&user=anders.ellersgaard%40mindlab.dk&hmac=bc608bac2d0241dff7080864baab1984"
+				]).on('error', function(err) {
+				    console.log(err);
+				}).play();
+			}
+		} else {
+			player = new Player([
+			    "https://demows.voxygen.fr/ws/tts1?text=Il+n%27y+a+pas+d%27infos+disponibles+pour+cette+ligne.&voice=Loic&header=headerless&coding=mp3%3A128-0&user=anders.ellersgaard%40mindlab.dk&hmac=bc608bac2d0241dff7080864baab1984"
+			]).on('error', function(err) {
+			    console.log(err);
+			}).play();
+		}
+	} else {
+		player = new Player([
+		    "https://demows.voxygen.fr/ws/tts1?text=Il+n%27y+a+pas+d%27infos+disponibles+pour+cette+ligne.&voice=Loic&header=headerless&coding=mp3%3A128-0&user=anders.ellersgaard%40mindlab.dk&hmac=bc608bac2d0241dff7080864baab1984"
+		]).on('error', function(err) {
+		    console.log(err);
+		}).play();		
+	}
+
+		// console.log('Prochain bus à l\'arrêt '+goodStop.stop_name+', direction '+goodRoute+', est à '+goodTime.arrival_time);
+
+	// return('Prochain bus à l\'arrêt '+goodStop.stop_name+', direction '+goodRoute+', est à '+goodTime.arrival_time);
 }
 
 function getStop (data, direction) {
@@ -176,7 +264,7 @@ function getRoutes (routes, route_id, direction) {
 	return nameRoute;
 }
 
-function getTimes (data, stop_id, data_trip) {
+function getTimes (data, stop_id, data_trip, route_id) {
 	var date = new Date (),
 		hour = date.getHours (),
 		minute = date.getMinutes (),
@@ -199,24 +287,31 @@ function getTimes (data, stop_id, data_trip) {
 	}
 
 	for (var i = 1; i < data.length - 1; i ++) {
-		var hour = dateCompare (data[i].arrival_time, actualTime);
-		if (hour == 1 && data[i].stop_id == stop_id) {
+		var a = data[i].arrival_time.split(':'),
+			b = actualTime.split(':');
 
-			var a = data[i].arrival_time.split(':');
-			var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]); 
-			goodTimes.push(seconds);
+		var secondsA = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]),
+			secondsB = (+b[0]) * 60 * 60 + (+b[1]) * 60 + (+b[2]);
 
-			for (var k = 0; k < data_trip.length; k ++) {
-				if (data[i].trip_id == data_trip[k].trip_id) {
-					if (Math.min.apply(null, goodTimes) == seconds) {
-						posGoodTime = i;
-					}
-				}
+		for (var k = 0; k < data_trip.length; k ++) {
+			if (parseInt(secondsA) > parseInt(secondsB) && data[i].stop_id == stop_id && data[i].trip_id == data_trip[k].trip_id) {
+				goodTimes.push(secondsA);
 			}
 		}
 	}
 
-	return data[posGoodTime];
+	var totalSecond = Math.min.apply(null, goodTimes);
+
+	var hr  = Math.floor(totalSecond / 3600),
+		min = Math.floor((totalSecond - (hr * 3600)) / 60),
+		sec = totalSecond - (hr * 3600) - (min * 60);
+
+	hours = hr;
+	minutes = min;
+
+	var time = hr + ':' + min;
+
+	return time;
 }
 
 /* CALC FUNCTIONS */

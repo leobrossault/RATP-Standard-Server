@@ -1,28 +1,161 @@
-var express = require('express'),
-	bodyParser = require('body-parser'),
-	path = require('express-path'),
-	five = require('johnny-five'),
-	board = new five.Board({ port : '\\\\.\\COM6' }),
-	bus = require('./controllers/bus');
+var serialport = require('serialport'),
+    bus = require('./controllers/bus'),
+    portName = '/dev/ttyACM0',
+    sp,
+    Player = require('player'),
+    say = require('say'),
+    _player,
+    ColorThief = require('color-thief'),
+    fs = require('fs'),
+    superagent = require('superagent');
 
-board.on('ready', function() {
-	console.log('Board is ready !');
-});
+var isReady = 0,
+    previousNumber,
+    actualNumber,
+    previousDirection = 'direction1',
+    actualDirection = 1,
+    phoneReady = 0,
+    previousPhoneState = 'hangedUp',
+    actualPhoneState;
 
-getData(91);
+var voices = ['Helene' ,'Loic', 'Moussa', 'Philippe', 'Mendoo', 'Fabienne'],
+    voice = voices[Math.floor(Math.random() * voices.length)];
 
-function getData (line) {
-	bus.parseGTFS ('bus', line, 0);
+connectToSerialPort ();
+catchNewNumber ();
+// getData (91);
+
+// ##
+// CONNECTION TO SERIAL PORT
+function connectToSerialPort () {
+  console.log("Connect to Arduino by seriaPort "+portName);
+
+  sp = new serialport.SerialPort(portName, {
+      baudRate: 9600,
+      dataBits: 8,
+      parity: 'none',
+      stopBits: 1,
+      flowControl: false,
+      parser: serialport.parsers.readline("\r\n")
+  });
+
+  sp.on('data', function(input) {
+    if (input == 'pickedUp') {
+      phoneReady = 1;
+    } else if (input == 'hangedUp') {
+      phoneReady = 0;
+    }
+
+    if (isNaN(parseInt(input) / 10) == false) {
+      if (input != null) {
+        if (input < 9) {
+          input ++;
+        } else {
+          input = 0;
+        }
+
+        if (isReady == 1) {
+          if (phoneReady == 1) {
+            actualNumber = input;
+            getNumber (input);
+          }
+        } else {
+          isReady = 1;
+        }
+      }
+    }
+
+    if (input == 'direction1' || input == 'direction2') {
+      if (previousDirection != input) {
+        if (input == 'direction1') {
+          actualDirection = 0;
+        } else {
+          actualDirection = 1;
+        }
+
+        previousDirection = input;
+      }
+    }
+
+    if (input == 'hangedUp' || input == 'pickedUp') {
+      if (previousPhoneState != input) {
+        if (input == 'hangedUp') {
+          actualPhoneState = 0;
+        } else {
+          _player = new Player([     
+            "https://demows.voxygen.fr/ws/tts1?text=Bonjour%2C+bienvenue+%C3%A0+la+centrale+RATP%2C+veuillez+composer+un+num%C3%A9ro+de+ligne.&voice=Loic&header=headerless&coding=mp3%3A128-0&user=anders.ellersgaard%40mindlab.dk&hmac=c06c0086084e5ac2a9420681be7849f3"
+          ]).on('error', function(err) {
+              console.log(err);
+          }).play();
+
+          actualPhoneState = 1;
+        }
+
+        previousPhoneState = input;
+      }
+    }
+  });
 }
 
-/* EXPORT MODULE AND ADD ROUTES */
-var app = express();
+var newNumber = 0,
+    totalNumber = '';
 
-app.use(bodyParser.json()); 
-app.use(bodyParser.urlencoded({ extended: true }));
-require('./routes/routes')(app);
-// app.use(express.static(__dirname + '/public'));
+function getNumber (number) {
+  if (newNumber == 0) {
+    totalNumber = totalNumber + number;
+  }
+}
 
-app.listen(8080);
+var countSecond = 0;
 
-module.exports = app;
+function catchNewNumber () {
+  setInterval (function () {
+    if (actualNumber != previousNumber) {
+      previousNumber = actualNumber;
+      countSecond = 0;
+    }
+
+    if (actualNumber == previousNumber && countSecond == 3) {
+      if (parseInt(totalNumber) != 0 && parseInt(totalNumber) != undefined && parseInt(totalNumber) != NaN & totalNumber != '') {
+        getData (totalNumber);
+      }
+
+      countSecond = 0;
+      totalNumber = '';
+    }
+
+    countSecond ++;
+  }, 1000);
+}
+
+function getData (number) {
+  // Color
+  console.log('Ma ligne est : '+ number);
+  // say.speak(null , 'Veuillez patientez quelques instant, nous traitons votre demande');
+
+  var colorThief = new ColorThief(),
+      colorBus;
+
+  if (fs.existsSync('./datas/colors/'+number+'.png')) {
+    colorBus = colorThief.getColor('./datas/colors/'+number+'.png');
+  } else {
+    colorBus = colorThief.getColor('./datas/colors/Noct-01-genRVB.png');
+  }
+
+  var concatColor = colorBus[0] + ',' + colorBus[1] + ',' + colorBus[2];
+
+  sp.write(concatColor , function(err, results) {
+    if (err) { console.log(err); }
+  });
+
+   console.log(colorBus);
+
+  var player = new Player([     
+    "https://demows.voxygen.fr/ws/tts1?text=Veuillez+patienter%2C+nous+traitons+votre+demande.&voice=Loic&header=headerless&coding=mp3%3A128-0&user=anders.ellersgaard%40mindlab.dk&hmac=444bf3ec474b731671b911c83d73125b"
+  ]).on('error', function(err) {
+    console.log(err);
+    setTimeout(function () {
+      bus.parseGTFS ('bus', number, actualDirection, voice);
+    }, 1000);
+  }).play();
+}

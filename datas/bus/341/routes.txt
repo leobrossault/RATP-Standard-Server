@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368780,100,"341","(PORTE DE CLIGNANCOURT <-> CHARLES DE GAULLE - ETOILE) - Aller",,3,,FFFFFF,000000
+1368781,100,"341","(PORTE DE CLIGNANCOURT <-> CHARLES DE GAULLE - ETOILE) - Retour",,3,,FFFFFF,000000

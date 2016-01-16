@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369104,100,"487","(PORTE DE L'ESSONNE <-> JUVISY RER) - Aller",,3,,FFFFFF,000000
+1369105,100,"487","(PORTE DE L'ESSONNE <-> JUVISY RER) - Retour",,3,,FFFFFF,000000
+1369106,100,"487","(ATHIS-MONS - PORTE DE L'ESSONNE <-> JUVISY RER) - Aller",,3,,FFFFFF,000000
+1369107,100,"487","(ATHIS-MONS - PORTE DE L'ESSONNE <-> JUVISY RER) - Retour",,3,,FFFFFF,000000

@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368748,100,"286","(VILLEJUIF - LOUIS ARAGON <-> ANTONY RER) - Aller",,3,,FFFFFF,000000
+1368749,100,"286","(VILLEJUIF - LOUIS ARAGON <-> ANTONY RER) - Retour",,3,,FFFFFF,000000
+1369110,100,"286","((VILLEJUIF-LOUIS ARAGON - ANTONY) <-> MAIRIE DE FRESNES) - Aller",,3,,FFFFFF,000000
+884916,100,"286","(VILLEJUIF - LOUIS ARAGON <-> MAIRIE DE FRESNES) - Aller",,3,,FFFFFF,000000

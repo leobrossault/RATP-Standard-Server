@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368934,100,"137","(PORTE DE CLIGNANCOURT <-> ZONE INDUSTRIELLE NORD) - Aller",,3,,FFFFFF,000000
+1368935,100,"137","(PORTE DE CLIGNANCOURT <-> ZONE INDUSTRIELLE NORD) - Retour",,3,,FFFFFF,000000

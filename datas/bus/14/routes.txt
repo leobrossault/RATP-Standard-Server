@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369036,100,"N14","(MAIRIE DE SAINT-OUEN <-> MAIRIE DE SAINT-OUEN) - Aller",,3,,FFFFFF,000000
+1369037,100,"N14","(MAIRIE DE SAINT-OUEN <-> MAIRIE DE SAINT-OUEN) - Retour",,3,,FFFFFF,000000

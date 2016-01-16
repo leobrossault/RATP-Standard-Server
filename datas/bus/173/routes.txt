@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369145,100,"173","(PORTE DE CLICHY <-> LA COURNEUVE-8 MAI 1945) - Aller",,3,,FFFFFF,000000
+1369146,100,"173","(PORTE DE CLICHY <-> LA COURNEUVE-8 MAI 1945) - Retour",,3,,FFFFFF,000000
+1369177,100,"173","(PORTE DE CLICHY - METRO <-> LA COURNEUVE-8 MAI 1945) - Aller",,3,,FFFFFF,000000
+1369178,100,"173","(PORTE DE CLICHY - METRO <-> LA COURNEUVE-8 MAI 1945) - Retour",,3,,FFFFFF,000000

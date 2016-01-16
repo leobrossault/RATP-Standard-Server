@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368816,100,"53","(OPERA <-> PONT DE LEVALLOIS) - Aller",,3,,FFFFFF,000000
+1368817,100,"53","(OPERA <-> PONT DE LEVALLOIS) - Retour",,3,,FFFFFF,000000

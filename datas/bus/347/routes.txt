@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368672,100,"347","(PONT DE BONDY - AVENUE DE ROSNY <-> HOPITAL DE MONTFERMEIL) - Aller",,3,,FFFFFF,000000
+1368673,100,"347","(PONT DE BONDY - AVENUE DE ROSNY <-> HOPITAL DE MONTFERMEIL) - Retour",,3,,FFFFFF,000000
+900405,100,"347","(PONT DE BONDY - AVENUE DE ROSNY <-> HOTEL DE VILLE DE MONTFERMEIL) - Aller",,3,,FFFFFF,000000
+900408,100,"347","(VICTOR HUGO - JULES GUESDE) - Retour",,3,,FFFFFF,000000

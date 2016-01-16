@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368610,100,"181","(ECOLE VETERINAIRE-METRO <-> CRETEIL-GAITE RN 19) - Aller",,3,,FFFFFF,000000
+1368611,100,"181","(ECOLE VETERINAIRE-METRO <-> CRETEIL-GAITE RN 19) - Retour",,3,,FFFFFF,000000

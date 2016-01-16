@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1176202,100,"184","(PORTE D'ITALIE - HELENE BOUCHER <-> PASTEUR) - Retour",,3,,FFFFFF,000000
+1241582,100,"184","(CARREFOUR DES POULETS <-> PORTE D'ITALIE-METRO) - Retour",,3,,FFFFFF,000000
+1368832,100,"184","(PORTE D'ITALIE-METRO <-> PASTEUR) - Aller",,3,,FFFFFF,000000
+1368833,100,"184","(PORTE D'ITALIE-METRO <-> PASTEUR) - Retour",,3,,FFFFFF,000000

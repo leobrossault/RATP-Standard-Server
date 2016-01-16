@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368852,100,"89","(PORTE DE FRANCE <-> GARE DE VANVES-MALAKOFF) - Aller",,3,,FFFFFF,000000
+1368853,100,"89","(PORTE DE FRANCE <-> GARE DE VANVES-MALAKOFF) - Retour",,3,,FFFFFF,000000

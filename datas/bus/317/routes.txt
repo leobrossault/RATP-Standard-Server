@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368706,100,"317","(HOTEL DE VILLE DE CRETEIL <-> NOGENT-LE-PERREUX RER) - Aller",,3,,FFFFFF,000000
+1368707,100,"317","(HOTEL DE VILLE DE CRETEIL <-> NOGENT-LE-PERREUX RER) - Retour",,3,,FFFFFF,000000
+872298,100,"317","(HOTEL DE VILLE DE CRETEIL <-> LE PARC DE SAINT MAUR RER) - Aller",,3,,FFFFFF,000000

@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369139,100,"471","(SAINT-CLOUD-LES COTEAUX <-> GARE DE VERSAILLES-RIVE DROITE) - Aller",,3,,FFFFFF,000000
+1369140,100,"471","(SAINT-CLOUD-LES COTEAUX <-> GARE DE VERSAILLES-RIVE DROITE) - Retour",,3,,FFFFFF,000000

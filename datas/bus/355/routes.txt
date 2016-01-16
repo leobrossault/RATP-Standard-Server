@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1086437,100,"355","((JJ ROUSSEAU CIRCULAIRE) <-> LYCEE JEAN-JACQUES ROUSSEAU.) - Aller",,3,,FFFFFF,000000
+1086484,100,"355","((CIRCULAIRE) <-> LYCEE JEAN-JACQUES ROUSSEAU.) - Aller",,3,,FFFFFF,000000
+1086485,100,"355","((LYCEE JJ ROUSSEAU CIRCULAIRE) <-> LYCEE JEAN-JACQUES ROUSSEAU.) - Aller",,3,,FFFFFF,000000

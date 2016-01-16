@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369233,100,"289","(PORTE DE SAINT-CLOUD-METRO <-> GEORGES POMPIDOU) - Aller",,3,,FFFFFF,000000
+1369234,100,"289","(PORTE DE SAINT-CLOUD-METRO <-> GEORGES POMPIDOU) - Retour",,3,,FFFFFF,000000

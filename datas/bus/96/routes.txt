@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368712,100,"96","(GARE MONTPARNASSE <-> PORTE DES LILAS) - Aller",,3,,FFFFFF,000000
+1368713,100,"96","(GARE MONTPARNASSE <-> PORTE DES LILAS) - Retour",,3,,FFFFFF,000000

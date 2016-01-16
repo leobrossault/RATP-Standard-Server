@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1258386,100,"39","(PALAIS ROYAL - COMEDIE FRANCAISE <-> (GARE DU NORD - ISSY-FRERES VOISIN)) - Retour",,3,,FFFFFF,000000
+1368834,100,"39","(GARE DU NORD <-> FRERES VOISIN) - Aller",,3,,FFFFFF,000000
+1368835,100,"39","(GARE DU NORD <-> FRERES VOISIN) - Retour",,3,,FFFFFF,000000

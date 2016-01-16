@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368880,100,"153","(PORTE DE LA CHAPELLE <-> MOULIN NEUF) - Aller",,3,,FFFFFF,000000
+1368881,100,"153","(PORTE DE LA CHAPELLE <-> MOULIN NEUF) - Retour",,3,,FFFFFF,000000
+969046,100,"153","(PORTE DE LA CHAPELLE <-> CITE FLOREAL) - Aller",,3,,FFFFFF,000000

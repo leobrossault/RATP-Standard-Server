@@ -1,0 +1,6 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1185392,100,"47","(GARE DE L'EST <-> LE KREMLIN-BICETRE-METRO) - Aller",,3,,FFFFFF,000000
+1185393,100,"47","(LE KREMLIN-BICETRE-METRO <-> FORT DU KREMLIN-BICETRE) - Retour",,3,,FFFFFF,000000
+1185394,100,"47","(PLACE D'ITALIE <-> FORT DU KREMLIN-BICETRE) - Retour",,3,,FFFFFF,000000
+1369209,100,"47","(GARE DE L'EST <-> FORT DU KREMLIN-BICETRE) - Aller",,3,,FFFFFF,000000
+1369210,100,"47","(GARE DE L'EST <-> FORT DU KREMLIN-BICETRE) - Retour",,3,,FFFFFF,000000

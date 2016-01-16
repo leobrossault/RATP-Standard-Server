@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368356,100,"182","(MAIRIE D'IVRY-METRO <-> PONT DE CHOISY) - Aller",,3,,FFFFFF,000000
+1368826,100,"182","(MAIRIE D'IVRY-METRO <-> VILLENEUVE-TRIAGE RER) - Aller",,3,,FFFFFF,000000
+1368827,100,"182","(MAIRIE D'IVRY-METRO <-> VILLENEUVE-TRIAGE RER) - Retour",,3,,FFFFFF,000000

@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1321598,100,"190","(MAIRIE D'ISSY <-> PETIT CLAMART - RD 906) - Aller",,3,,FFFFFF,000000
+1321599,100,"190","(PETIT CLAMART - RD 906 <-> MAIRIE D'ISSY-METRO) - Retour",,3,,FFFFFF,000000

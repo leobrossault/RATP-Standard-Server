@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1221169,100,"337","(MAIRIE DE MONTMAGNY <-> (STAINS RER -  DEUIL-LA-BARRE)) - Retour",,3,,FFFFFF,000000
+1369265,100,"337","(ZONE ARTISANALE DU MOUTIER <-> GARE DE PIERREFITTE - STAINS RER) - Aller",,3,,FFFFFF,000000
+1369266,100,"337","(ZONE ARTISANALE DU MOUTIER <-> GARE DE PIERREFITTE - STAINS RER) - Retour",,3,,FFFFFF,000000

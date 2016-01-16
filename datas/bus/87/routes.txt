@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368842,100,"87","(CHAMP DE MARS <-> PORTE DE REUILLY) - Aller",,3,,FFFFFF,000000
+1368843,100,"87","(CHAMP DE MARS <-> PORTE DE REUILLY) - Retour",,3,,FFFFFF,000000

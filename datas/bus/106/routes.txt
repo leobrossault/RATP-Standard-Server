@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368606,100,"106","(JOINVILLLE LE PONT-RER <-> GARE DE VILLIERS SUR MARNE) - Aller",,3,,FFFFFF,000000
+1368607,100,"106","(JOINVILLLE LE PONT-RER <-> GARE DE VILLIERS SUR MARNE) - Retour",,3,,FFFFFF,000000

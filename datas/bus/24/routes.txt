@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1100682,100,"24","(GARE SAINT-LAZARE <-> ECOLE VETERINAIRE DE MAISONS-ALFORT) - Retour",,3,,FFFFFF,000000
+877784,100,"24","(GARE SAINT LAZARE <-> ECOLE VETERINAIRE DE MAISONS-ALFORT) - Aller",,3,,FFFFFF,000000
+877785,100,"24","(GARE SAINT-LAZARE) - Retour",,3,,FFFFFF,000000
+877786,100,"24","(MAUBERT - MUTUALITE) - Retour",,3,,FFFFFF,000000

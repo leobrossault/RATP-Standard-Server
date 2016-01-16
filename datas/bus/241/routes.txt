@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368988,100,"241","(PORTE D'AUTEUIL-METRO <-> RUEIL-MALMAISON RER) - Aller",,3,,FFFFFF,000000
+1368989,100,"241","(PORTE D'AUTEUIL-METRO <-> RUEIL-MALMAISON RER) - Retour",,3,,FFFFFF,000000
+942168,100,"241","(PLACE DE LA PAIX <-> RUEIL-MALMAISON RER) - Retour",,3,,FFFFFF,000000

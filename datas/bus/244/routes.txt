@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1303839,100,"244","(PORTE MAILLOT - METRO - RER <-> (RUEIL-PORTE MAILLOT)) - Retour",,3,,FFFFFF,000000
+1303840,100,"244","((RUEIL-PORTE MAILLOT) <-> RUEIL-MALMAISON RER) - Aller",,3,,FFFFFF,000000
+1369301,100,"244","(PORTE MAILLOT - METRO - RER <-> RUEIL-MALMAISON RER) - Aller",,3,,FFFFFF,000000
+1369302,100,"244","(PORTE MAILLOT - METRO - RER <-> RUEIL-MALMAISON RER) - Retour",,3,,FFFFFF,000000

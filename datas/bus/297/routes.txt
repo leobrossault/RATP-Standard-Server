@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1315741,100,"297","((PORTE D'ORLEANS - LONGJUMEAU) <-> PLACE CHARLES STEBER) - Aller",,3,,FFFFFF,000000
+1315742,100,"297","(ANTONY RER <-> (PORTE D'ORLEANS - LONGJUMEAU)) - Retour",,3,,FFFFFF,000000
+1369197,100,"297","(PORTE D'ORLEANS-METRO <-> PLACE CHARLES STEBER) - Aller",,3,,FFFFFF,000000
+1369198,100,"297","(PORTE D'ORLEANS-METRO <-> PLACE CHARLES STEBER) - Retour",,3,,FFFFFF,000000

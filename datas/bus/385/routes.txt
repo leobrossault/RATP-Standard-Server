@@ -1,0 +1,6 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1044002,100,"385","(EPINAY SUR SEINE <-> PYRAMIDE DE JUVISY) - Aller",,3,,FFFFFF,000000
+1044003,100,"385","(PYRAMIDE DE JUVISY) - Retour",,3,,FFFFFF,000000
+1044004,100,"385","(TOULOUSE-LAUTREC) - Retour",,3,,FFFFFF,000000
+1368752,100,"385","(GARE D'EPINAY-SUR-ORGE RER <-> JUVISY RER) - Aller",,3,,FFFFFF,000000
+1368753,100,"385","(GARE D'EPINAY-SUR-ORGE RER <-> JUVISY RER) - Retour",,3,,FFFFFF,000000

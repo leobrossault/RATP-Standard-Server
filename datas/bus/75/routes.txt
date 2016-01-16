@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368876,100,"75","(PONT NEUF <-> PORTE DE PANTIN) - Aller",,3,,FFFFFF,000000
+1368877,100,"75","(PONT NEUF <-> PORTE DE PANTIN) - Retour",,3,,FFFFFF,000000

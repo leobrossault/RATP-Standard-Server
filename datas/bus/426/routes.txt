@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369183,100,"426","(PONT DE SEVRES <-> LA CELLE ST-CLOUD - GARE SNCF) - Aller",,3,,FFFFFF,000000
+1369184,100,"426","(PONT DE SEVRES <-> LA CELLE ST-CLOUD - GARE SNCF) - Retour",,3,,FFFFFF,000000

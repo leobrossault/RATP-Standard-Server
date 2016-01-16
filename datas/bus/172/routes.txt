@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368824,100,"172","(BOURG-LA-REINE RER <-> L'ECHAT-PARKING) - Aller",,3,,FFFFFF,000000
+1368825,100,"172","(BOURG-LA-REINE RER <-> L'ECHAT-PARKING) - Retour",,3,,FFFFFF,000000

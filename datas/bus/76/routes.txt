@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1351298,100,"76","(GALLIENI-METRO) - Retour",,3,,FFFFFF,000000
+1368710,100,"76","(LOUVRE - RIVOLI <-> BAGNOLET-LOUISE MICHEL) - Aller",,3,,FFFFFF,000000
+1368711,100,"76","(LOUVRE - RIVOLI <-> BAGNOLET-LOUISE MICHEL) - Retour",,3,,FFFFFF,000000

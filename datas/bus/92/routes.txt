@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1258388,100,"92","(GARE MONTPARNASSE <-> (MONTP-PORTE DE CHAMPERRET)) - Retour",,3,,FFFFFF,000000
+1368844,100,"92","(GARE MONTPARNASSE <-> PORTE DE CHAMPERRET) - Aller",,3,,FFFFFF,000000
+1368845,100,"92","(GARE MONTPARNASSE <-> PORTE DE CHAMPERRET) - Retour",,3,,FFFFFF,000000

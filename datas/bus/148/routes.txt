@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369052,100,"148","(BOBIGNY - PABLO PICASSO <-> MUSEE DE L'AIR ET DE L'ESPACE) - Aller",,3,,FFFFFF,000000
+1369053,100,"148","(BOBIGNY - PABLO PICASSO <-> MUSEE DE L'AIR ET DE L'ESPACE) - Retour",,3,,FFFFFF,000000

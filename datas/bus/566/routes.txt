@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1186730,100,"566","((CIRCULAIRE - RUE DE L'INDUSTRIE) <-> RUE DE L'INDUSTRIE.) - Aller",,3,,FFFFFF,000000
+1369213,100,"566","(EGLISE DE COLOMBES <-> PISCINE - PATINOIRE) - Aller",,3,,FFFFFF,000000
+1369214,100,"566","(EGLISE DE COLOMBES <-> PISCINE - PATINOIRE) - Retour",,3,,FFFFFF,000000

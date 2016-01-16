@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1323393,100,"195","(DIVISION LECLERC - FOSSE BAZIN <-> ROBINSON RER) - Retour",,3,,FFFFFF,000000
+1369309,100,"195","(CHATILLON - MONTROUGE-METRO <-> ROBINSON RER.) - Aller",,3,,FFFFFF,000000
+1369310,100,"195","(CHATILLON - MONTROUGE-METRO <-> ROBINSON RER.) - Retour",,3,,FFFFFF,000000

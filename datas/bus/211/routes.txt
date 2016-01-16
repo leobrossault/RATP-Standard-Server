@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368652,100,"211","(VAIRES/MARNE-GARE DE VAIRES TORCY <-> TERRE CIEL) - Aller",,3,,FFFFFF,000000
+1368653,100,"211","(VAIRES/MARNE-GARE DE VAIRES TORCY <-> TERRE CIEL) - Retour",,3,,FFFFFF,000000
+869484,100,"211","(NOISIEL <-> TERRE CIEL) - Retour",,3,,FFFFFF,000000

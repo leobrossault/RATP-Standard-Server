@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369010,100,"565","(MAIRIE DE RUEIL <-> EGLISE DE BUZENVAL) - Aller",,3,,FFFFFF,000000
+1369011,100,"565","(MAIRIE DE RUEIL <-> EGLISE DE BUZENVAL) - Retour",,3,,FFFFFF,000000

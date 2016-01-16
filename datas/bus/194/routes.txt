@@ -1,0 +1,6 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1282698,100,"194","(PORTE D'ORLEANS <-> (LYCEE DE CHATENAY-MALABRY)) - Retour",,3,,FFFFFF,000000
+1369243,100,"194","(PORTE D'ORLEANS <-> LYCEE POLYVALENT) - Aller",,3,,FFFFFF,000000
+1369244,100,"194","(PORTE D'ORLEANS <-> LYCEE POLYVALENT) - Retour",,3,,FFFFFF,000000
+1369283,100,"194","(PORTE D'ORLEANS <-> SOPHIE BARAT) - Aller",,3,,FFFFFF,000000
+1369284,100,"194","(PORTE D'ORLEANS <-> SOPHIE BARAT) - Retour",,3,,FFFFFF,000000

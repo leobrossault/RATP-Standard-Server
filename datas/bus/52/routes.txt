@@ -1,0 +1,6 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1205395,100,"52","(CHARLES DE GAULLE-ETOILE-FRIEDLAND) - Retour",,3,,FFFFFF,000000
+1368886,100,"52","(OPERA) - Aller",,3,,FFFFFF,000000
+1368887,100,"52","(OPERA) - Retour",,3,,FFFFFF,000000
+1368888,100,"52","(CHARLES DE GAULLE-ETOILE-FRIEDLAND <-> PORTE D'AUTEUIL) - Aller",,3,,FFFFFF,000000
+1368889,100,"52","(CHARLES DE GAULLE-ETOILE-FRIEDLAND <-> PORTE D'AUTEUIL) - Retour",,3,,FFFFFF,000000

@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1319356,100,"206","(PLACE VERDUN) - Aller",,3,,FFFFFF,000000
+1369149,100,"206","(NOISY LE GRAND MONT D'EST-RER <-> EMERAINVILLE-PONTAULT COMBAULT-SNCF) - Aller",,3,,FFFFFF,000000
+1369150,100,"206","(NOISY LE GRAND MONT D'EST-RER <-> EMERAINVILLE-PONTAULT COMBAULT-SNCF) - Retour",,3,,FFFFFF,000000

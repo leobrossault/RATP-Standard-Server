@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368670,100,"147","(EGLISE DE PANTIN-METRO <-> SEVRAN-AVENUE RONSARD) - Aller",,3,,FFFFFF,000000
+1368671,100,"147","(EGLISE DE PANTIN-METRO <-> SEVRAN-AVENUE RONSARD) - Retour",,3,,FFFFFF,000000
+900404,100,"147","(SEVRAN-AVENUE RONSARD <-> VICTOR HUGO - JULES GUESDE) - Retour",,3,,FFFFFF,000000

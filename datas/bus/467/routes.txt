@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1323062,100,"467","(HENRI REGNAULT. <-> RUEIL-MALMAISON RER) - Retour",,3,,FFFFFF,000000
+1369000,100,"467","(PONT DE SEVRES-METRO <-> RUEIL-MALMAISON RER) - Aller",,3,,FFFFFF,000000
+1369001,100,"467","(PONT DE SEVRES-METRO <-> RUEIL-MALMAISON RER) - Retour",,3,,FFFFFF,000000

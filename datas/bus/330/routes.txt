@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368636,100,"330","(FORT D'AUBERVILLIERS-METRO <-> R. QUENEAU-METRO-ANATOLE FRANCE) - Aller",,3,,FFFFFF,000000
+1368637,100,"330","(FORT D'AUBERVILLIERS-METRO <-> R. QUENEAU-METRO-ANATOLE FRANCE) - Retour",,3,,FFFFFF,000000

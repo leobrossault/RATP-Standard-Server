@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368770,100,"86","(SAINT-GERMAIN-DES-PRES <-> SAINT-MANDE - DEMI LUNE) - Aller",,3,,FFFFFF,000000
+1368771,100,"86","(SAINT-GERMAIN-DES-PRES <-> SAINT-MANDE - DEMI LUNE) - Retour",,3,,FFFFFF,000000

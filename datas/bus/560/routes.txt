@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369012,100,"560","(DROITS DE L'HOMME <-> PLACE DE LA BOULE - GAMBETTA) - Aller",,3,,FFFFFF,000000
+1369013,100,"560","(DROITS DE L'HOMME <-> PLACE DE LA BOULE - GAMBETTA) - Retour",,3,,FFFFFF,000000
+1369060,100,"560","(DROITS DE L'HOMME <-> PLAINCHAMP-ROCHET) - Aller",,3,,FFFFFF,000000
+1369061,100,"560","(DROITS DE L'HOMME <-> PLAINCHAMP-ROCHET) - Retour",,3,,FFFFFF,000000

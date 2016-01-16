@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368728,100,"134","(FORT D'AUBERVILLIERS-METRO <-> JOUHAUX-BLUM) - Aller",,3,,FFFFFF,000000
+1368729,100,"134","(FORT D'AUBERVILLIERS-METRO <-> JOUHAUX-BLUM) - Retour",,3,,FFFFFF,000000
+1368730,100,"134","(FORT D'AUBERVILLIERS-METRO <-> JOUHAUX-BLUM) - Aller",,3,,FFFFFF,000000
+1368731,100,"134","(FORT D'AUBERVILLIERS-METRO <-> JOUHAUX-BLUM) - Retour",,3,,FFFFFF,000000

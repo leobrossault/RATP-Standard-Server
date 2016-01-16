@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368590,100,"520","(BRY-SUR-MARNE RER <-> LES HAUTS DE BRY-VILLIERS SUR MARNE) - Aller",,3,,FFFFFF,000000
+1368591,100,"520","(BRY-SUR-MARNE RER <-> LES HAUTS DE BRY-VILLIERS SUR MARNE) - Retour",,3,,FFFFFF,000000
+857976,100,"520","(BRY SUR MARNE <-> LES HAUTS DE BRY) - Retour",,3,,FFFFFF,000000

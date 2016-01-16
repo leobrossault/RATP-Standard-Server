@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1227999,100,"595","(LA BOURSIDIERE <-> ROBINSON RER) - Aller",,3,,FFFFFF,000000
+1228000,100,"595","(LA BOURSIDIERE <-> ROBINSON RER) - Aller",,3,,FFFFFF,000000
+1368866,100,"595","(LA BOURSIDIERE <-> ROBINSON RER) - Aller",,3,,FFFFFF,000000
+1368867,100,"595","(LA BOURSIDIERE <-> ROBINSON RER) - Retour",,3,,FFFFFF,000000

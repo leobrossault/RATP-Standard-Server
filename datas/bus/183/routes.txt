@@ -1,0 +1,6 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1082420,100,"183","(PORTE DE CHOISY <-> ROUGET DE LISLE) - Aller",,3,,FFFFFF,000000
+1369167,100,"183","(PORTE DE CHOISY <-> AEROPORT D'ORLY-TERMINAL SUD) - Aller",,3,,FFFFFF,000000
+1369168,100,"183","(PORTE DE CHOISY <-> AEROPORT D'ORLY-TERMINAL SUD) - Retour",,3,,FFFFFF,000000
+1369169,100,"183","(PORTE DE CHOISY <-> MAIRIE D'ORLY) - Aller",,3,,FFFFFF,000000
+1369170,100,"183","(PORTE DE CHOISY <-> MAIRIE D'ORLY) - Retour",,3,,FFFFFF,000000

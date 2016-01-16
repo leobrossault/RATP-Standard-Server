@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368858,100,"62","(PORTE DE FRANCE <-> PORTE DE SAINT-CLOUD) - Aller",,3,,FFFFFF,000000
+1368859,100,"62","(PORTE DE FRANCE <-> PORTE DE SAINT-CLOUD) - Retour",,3,,FFFFFF,000000

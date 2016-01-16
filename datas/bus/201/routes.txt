@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368604,100,"201","(JOINVILLE LE PONT-RER <-> CHAMPIGNY-DIDEROT LA PLAGE) - Aller",,3,,FFFFFF,000000
+1368605,100,"201","(JOINVILLE LE PONT-RER <-> CHAMPIGNY-DIDEROT LA PLAGE) - Retour",,3,,FFFFFF,000000

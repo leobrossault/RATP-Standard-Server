@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368774,100,"43","(GARE DU NORD <-> BAGATELLE) - Aller",,3,,FFFFFF,000000
+1368775,100,"43","(GARE DU NORD <-> BAGATELLE) - Retour",,3,,FFFFFF,000000

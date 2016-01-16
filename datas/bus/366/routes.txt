@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1180317,100,"366","((EGLISE DE COLOMBES - ASNIERES) <-> EGLISE DE COLOMBES) - Aller",,3,,FFFFFF,000000
+1369211,100,"366","(ASNIERES - BORDS DE SEINE <-> EGLISE DE COLOMBES) - Aller",,3,,FFFFFF,000000
+1369212,100,"366","(ASNIERES - BORDS DE SEINE <-> EGLISE DE COLOMBES) - Retour",,3,,FFFFFF,000000

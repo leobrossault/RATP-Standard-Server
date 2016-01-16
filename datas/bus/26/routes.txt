@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369325,100,"26","(GARE SAINT-LAZARE <-> NATION - PLACE DES ANTILLES) - Aller",,3,,FFFFFF,000000
+1369326,100,"26","(GARE SAINT-LAZARE <-> NATION - PLACE DES ANTILLES) - Retour",,3,,FFFFFF,000000

@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369147,100,"120","(NOGENT SUR MARNE-RER <-> NOISY-LE-GRAND - MONT D'EST RER) - Aller",,3,,FFFFFF,000000
+1369148,100,"120","(NOGENT SUR MARNE-RER <-> NOISY-LE-GRAND - MONT D'EST RER) - Retour",,3,,FFFFFF,000000
+877836,100,"120","(NOGENT SUR MARNE-RER <-> BRY-SUR-MARNE RER) - Aller",,3,,FFFFFF,000000

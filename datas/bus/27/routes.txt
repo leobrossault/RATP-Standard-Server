@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368854,100,"27","(GARE SAINT-LAZARE <-> PORTE D'IVRY) - Aller",,3,,FFFFFF,000000
+1368855,100,"27","(GARE SAINT-LAZARE <-> PORTE D'IVRY) - Retour",,3,,FFFFFF,000000

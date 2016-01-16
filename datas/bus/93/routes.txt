@@ -1,0 +1,6 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368952,100,"93","(INVALIDES <-> SURESNES-DE GAULLE) - Aller",,3,,FFFFFF,000000
+1368953,100,"93","(INVALIDES <-> SURESNES-DE GAULLE) - Retour",,3,,FFFFFF,000000
+942344,100,"93","(INVALIDES <-> PONT DE NEUILLY-METRO) - Aller",,3,,FFFFFF,000000
+942345,100,"93","(PONT DE NEUILLY-METRO <-> SURESNES-DE GAULLE) - Retour",,3,,FFFFFF,000000
+942346,100,"93","(PONT DE NEUILLY <-> SURESNES-DE GAULLE) - Retour",,3,,FFFFFF,000000

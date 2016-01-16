@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369203,100,"65","(GARE DE LYON <-> PORTE DE LA CHAPELLE) - Aller",,3,,FFFFFF,000000
+1369204,100,"65","(GARE DE LYON <-> PORTE DE LA CHAPELLE) - Retour",,3,,FFFFFF,000000

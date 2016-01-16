@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369086,100,"485","(NOYER RENARD <-> DELALANDE PASTEUR) - Aller",,3,,FFFFFF,000000
+1369087,100,"485","(NOYER RENARD <-> DELALANDE PASTEUR) - Retour",,3,,FFFFFF,000000
+1369285,100,"485","(DELALANDE PASTEUR <-> NOYER RENARD.) - Aller",,3,,FFFFFF,000000
+1369286,100,"485","(DELALANDE PASTEUR <-> NOYER RENARD.) - Retour",,3,,FFFFFF,000000

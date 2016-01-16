@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368696,100,"127","(CROIX DE CHAVAUX-METRO <-> PLACE DE LA RESISTANCE) - Aller",,3,,FFFFFF,000000
+1368697,100,"127","(CROIX DE CHAVAUX-METRO <-> PLACE DE LA RESISTANCE) - Retour",,3,,FFFFFF,000000
+910833,100,"127","(CHARLES DE GAULLE) - Retour",,3,,FFFFFF,000000

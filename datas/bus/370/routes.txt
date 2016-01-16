@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1013825,100,"370","(VILLIERS LE BEL ARNOUVILLE RER <-> VILLIERS LE BEL ARNOUVILLE RER.) - Aller",,3,,FFFFFF,000000
+1369064,100,"370","(MARCHE DE SAINT-BRICE <-> VILLIERS LE BEL - GONESSE - ARNOU) - Aller",,3,,FFFFFF,000000
+1369065,100,"370","(MARCHE DE SAINT-BRICE <-> VILLIERS LE BEL - GONESSE - ARNOU) - Retour",,3,,FFFFFF,000000

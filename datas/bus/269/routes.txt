@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369066,100,"269","(GARGES-SARCELLES RER <-> HOTEL DE VILLE D'ATTAINVILLE) - Aller",,3,,FFFFFF,000000
+1369067,100,"269","(GARGES-SARCELLES RER <-> HOTEL DE VILLE D'ATTAINVILLE) - Retour",,3,,FFFFFF,000000
+988049,100,"269","((GARGES-SARCELLES RER) <-> RU DE VAUX) - Aller",,3,,FFFFFF,000000

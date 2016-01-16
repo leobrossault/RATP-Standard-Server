@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368668,100,"123","(MAIRIE D'ISSY-METRO <-> PORTE D'AUTEUIL-METRO) - Aller",,3,,FFFFFF,000000
+1368669,100,"123","(MAIRIE D'ISSY-METRO <-> PORTE D'AUTEUIL-METRO) - Retour",,3,,FFFFFF,000000
+869552,100,"123","(MAIRIE D'ISSY-METRO) - Retour",,3,,FFFFFF,000000

@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369072,100,"167","( AUDRA <-> PONT DE LEVALLOIS-METRO) - Aller",,3,,FFFFFF,000000
+1369073,100,"167","( AUDRA <-> PONT DE LEVALLOIS-METRO) - Retour",,3,,FFFFFF,000000

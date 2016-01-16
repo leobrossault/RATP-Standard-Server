@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1138223,100,"132","((BFM-VITRY-SUR-SEINE-MOULIN VERT) <-> MOULIN VERT) - Aller",,3,,FFFFFF,000000
+1369189,100,"132","(BIBLIOTHEQUE FRANCOIS MITTERRAND <-> MOULIN VERT) - Aller",,3,,FFFFFF,000000
+1369190,100,"132","(BIBLIOTHEQUE FRANCOIS MITTERRAND <-> MOULIN VERT) - Retour",,3,,FFFFFF,000000

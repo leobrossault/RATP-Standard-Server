@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369235,100,"389","(PONT DE SEVRES-METRO <-> GEORGES POMPIDOU) - Aller",,3,,FFFFFF,000000
+1369236,100,"389","(PONT DE SEVRES-METRO <-> GEORGES POMPIDOU) - Retour",,3,,FFFFFF,000000
+1369237,100,"389","(PONT DE SEVRES-METRO <-> GEORGES POMPIDOU) - Aller",,3,,FFFFFF,000000
+1369238,100,"389","(PONT DE SEVRES-METRO <-> GEORGES POMPIDOU) - Retour",,3,,FFFFFF,000000

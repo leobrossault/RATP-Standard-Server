@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368802,100,"88","(MONTSOURIS-TOMBE ISSOIRE <-> HOPITAL EUROPEEN GEORGES POMPIDOU) - Aller",,3,,FFFFFF,000000
+1368803,100,"88","(MONTSOURIS-TOMBE ISSOIRE <-> HOPITAL EUROPEEN GEORGES POMPIDOU) - Retour",,3,,FFFFFF,000000

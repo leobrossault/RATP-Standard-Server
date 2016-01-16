@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368630,100,"333","(GARGES LES GONESSES-RER <-> L'ARGENTIERE) - Aller",,3,,FFFFFF,000000
+1368631,100,"333","(GARGES LES GONESSES-RER <-> L'ARGENTIERE) - Retour",,3,,FFFFFF,000000
+1368632,100,"333","(GARGES-LES-GONESSE RER <-> PLACE DU 19 MARS 62) - Aller",,3,,FFFFFF,000000
+1368633,100,"333","(GARGES-LES-GONESSE RER <-> PLACE DU 19 MARS 62) - Retour",,3,,FFFFFF,000000

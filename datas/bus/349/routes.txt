@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1368662,100,"349","(PARC DES EXPOSITIONS <-> ROUTE DE L'ARPENTEUR-ADP) - Aller",,3,,FFFFFF,000000
+1368663,100,"349","(PARC DES EXPOSITIONS <-> ROUTE DE L'ARPENTEUR-ADP) - Retour",,3,,FFFFFF,000000

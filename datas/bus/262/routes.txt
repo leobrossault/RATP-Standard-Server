@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1124786,100,"262","((LA DEFENSE - MAISONS-LAFFITTE RER) <-> STALINGRAD) - Aller",,3,,FFFFFF,000000
+1124787,100,"262","(LA DEFENSE-METRO-RER-TRAMWAY <-> (LA DEFENSE - MAISONS-LAFFITTE RER)) - Retour",,3,,FFFFFF,000000
+1368962,100,"262","(PONT DE BEZONS <-> GARE DE MAISONS-LAFFITTE-RER) - Aller",,3,,FFFFFF,000000
+1368963,100,"262","(PONT DE BEZONS <-> GARE DE MAISONS-LAFFITTE-RER) - Retour",,3,,FFFFFF,000000

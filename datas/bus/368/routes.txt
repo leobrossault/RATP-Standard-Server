@@ -1,0 +1,3 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1369068,100,"368","(PLACE DU SOUVENIR FRANCAIS <-> GARGES - SARCELLES RER) - Aller",,3,,FFFFFF,000000
+1369069,100,"368","(PLACE DU SOUVENIR FRANCAIS <-> GARGES - SARCELLES RER) - Retour",,3,,FFFFFF,000000
